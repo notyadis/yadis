@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Award, Music, Mic, Zap } from 'lucide-react';
-import artistImage from '../../../assets/59d3b84e2e7910a41a81a5fea31dfdb8c9649102.png';
+const artistImage = "/assets/59d3b84e2e7910a41a81a5fea31dfdb8c9649102.png";
 
 const achievements = [
   { icon: Award, text: '2025 Best Female Zim Hip Hop Award Winner' },

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Play, Instagram } from 'lucide-react';
-import heroBackground from '../assets/25cfe357e6f7b5056bd7781ee7af12a280e05027.png';
+const heroBackground = "/assets/25cfe357e6f7b5056bd7781ee7af12a280e05027.png";
 
 export function Hero() {
   return (
