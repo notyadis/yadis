@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
-import faceCardCover from 'figma:asset/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
-import ndakusasaCover from 'figma:asset/c21eefb525c064d4449d63df929042b50b74193c.png';
+import faceCardCover from '../../../assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
+import ndakusasaCover from '../../../assets/c21eefb525c064d4449d63df929042b50b74193c.png';
 
 const tracks = [
   {
