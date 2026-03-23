@@ -44,7 +44,7 @@ export function Footer() {
             </h4>
             <div className="flex gap-4">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/yadis.zw"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-secondary border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
@@ -52,7 +52,7 @@ export function Footer() {
                 <Instagram size={20} />
               </a>
               <a
-                href="https://music.apple.com"
+                href="https://music.apple.com/zw/artist/yadis/1819582010"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-secondary border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
@@ -60,7 +60,7 @@ export function Footer() {
                 <Music size={20} />
               </a>
               <a
-                href="mailto:info@yadis.com"
+                href="mailto:notyadis@gmail.com"
                 className="w-10 h-10 bg-secondary border border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300"
               >
                 <Mail size={20} />
@@ -76,7 +76,7 @@ export function Footer() {
               © {currentYear} Yadis. All rights reserved.
             </p>
             <p className="text-xs text-gray-500" style={{ fontFamily: 'Rubik, sans-serif' }}>
-              Website by Yadis • Hectic Yard
+              Website by Make • Figma
             </p>
           </div>
         </div>

@@ -1,13 +1,6 @@
 import { motion } from 'motion/react';
-import { Award, Music, Mic, Zap } from 'lucide-react';
-const artistImage = "/assets/59d3b84e2e7910a41a81a5fea31dfdb8c9649102.png";
-
-const achievements = [
-  { icon: Award, text: '2025 Best Female Zim Hip Hop Award Winner' },
-  { icon: Music, text: 'Experimental genre-bending sound' },
-  { icon: Mic, text: 'Known for Raw, Authentic Lyricism' },
-  { icon: Zap, text: 'Emerging African Female Rapper' },
-];
+import { Award } from 'lucide-react';
+import bioBackground from '../../assets/f3a4e83d490c11cf5aa459cb6968b9493a3ee9aa.png';
 
 export function About() {
   return (
@@ -26,72 +19,62 @@ export function About() {
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Image */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative"
-          >
-            <div className="relative overflow-hidden">
-              <img
-                src={artistImage}
-                alt="Yadis performing on stage"
-                className="w-full h-auto object-cover object-center"
-                style={{ aspectRatio: '3/4' }}
-              />
-              <div className="absolute inset-0 border-4 border-primary/30 pointer-events-none transform translate-x-4 translate-y-4"></div>
-            </div>
-          </motion.div>
+        {/* Bio section with background image */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="relative mb-16 overflow-hidden"
+        >
+          {/* Background Image with overlays */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src={bioBackground}
+              alt="Yadis"
+              className="w-full h-full object-cover"
+            />
+            {/* Red tint overlay */}
+            <div className="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+            {/* Dark gradient overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/95"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/90"></div>
+          </div>
 
           {/* Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
-            <div>
+          <div className="relative z-10 p-8 sm:p-12 lg:p-16">
+            <div className="max-w-4xl mx-auto space-y-6">
               <h3 className="text-3xl sm:text-4xl mb-4 text-primary" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
                 Hectic Yard
               </h3>
-              <p className="text-gray-300 mb-4 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                Yadis is a Harare-born rapper and songwriter whose ascent has redefined the sound of modern Zimbabwean hip-hop. Blending English and Shona with a delivery that is as introspective as it is high-energy, she captures the grit, hustle, and complex emotions of Zimbabwean youth.
+              <p className="text-gray-200 mb-4 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                Harare-born rapper and songwriter Yadis is a central figure in modern Zimbabwean hip-hop. Blending English and Shona with an introspective delivery, she captures the grit and hustle of Zimbabwean youth.
               </p>
-              <p className="text-gray-300 mb-4 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                2025 marked her definitive breakout year. After building a loyal following through viral freestyles, she officially entered the scene with her debut project, the Ndakusasa Mixtape, featuring standout tracks like "Kepele" and "Simba Rako." Her momentum continued through the Mashoko Tapes Vol. 2 residency, leading to a landmark performance at Shoko Festival 2025, where she collaborated with UK rapper OneDa on the Mash Up Night stage.
+              <p className="text-gray-200 mb-4 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                2025 was her breakout year. After building a following through viral freestyles, she released her debut project, the Ndakusasa Mixtape. Her momentum continued through the Mashoko Tapes Vol. 2 residency, leading to a performance at Shoko Festival 2025, where she collaborated with UK rapper OneDa on the Mash Up Night stage. The year concluded with Yadis winning Best Female Artist at the 2025 Zim Hip Hop Awards.
               </p>
-              <p className="text-gray-300 mb-6 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                The year culminated in Yadis being crowned Best Female Artist at the 2025 Zim Hip Hop Awards, solidifying her place at the forefront of the culture. With a growing catalog of hits—including her latest single "FaceCard"—and collaborations with artists like RayKaz, Hooksmith, and Briza, Yadis continues to push creative boundaries while staying rooted in conscious storytelling.
+              <p className="text-gray-200 mb-6 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                In 2026, Yadis has continued to release new work and expand her reach. Following a performance at Shebeen Fest where she previewed new material, she released the music video for her latest single, "Personari" (produced by Usadaro). She also joined the Music Connects Africa program, further integrating her into the continental music scene. With a catalog that includes tracks from her debut mixtape and collaborations with artists like Hooksmith and Briza, Yadis continues to evolve her sound.
               </p>
             </div>
+          </div>
+        </motion.div>
 
-            {/* Achievements Grid */}
-            <div className="grid sm:grid-cols-2 gap-4">
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                    className="flex items-start gap-3 p-4 bg-card border border-primary/20 hover:border-primary/50 transition-colors duration-300"
-                  >
-                    <Icon className="text-primary flex-shrink-0 mt-1" size={24} />
-                    <p className="text-sm text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                      {achievement.text}
-                    </p>
-                  </motion.div>
-                );
-              })}
-            </div>
-          </motion.div>
-        </div>
+        {/* Achievement - centered */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex justify-center"
+        >
+          <div className="flex items-start gap-3 p-6 bg-card border-2 border-primary/40 hover:border-primary/60 transition-colors duration-300 max-w-md w-full">
+            <Award className="text-primary flex-shrink-0 mt-1" size={28} />
+            <p className="text-gray-300" style={{ fontFamily: 'Rubik, sans-serif' }}>
+              2025 Best Female Zim Hip Hop Award Winner
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

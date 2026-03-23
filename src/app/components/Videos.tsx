@@ -4,24 +4,19 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const videos = [
   {
+    title: 'FaceCard (Official Video)',
+    thumbnail: 'https://img.youtube.com/vi/3DcYqlFUmCrxUg9TZfcz4c/maxresdefault.jpg',
+    videoUrl: 'https://youtu.be/3DcYqlFUmCrxUg9TZfcz4c',
+  },
+  {
     title: 'Simba Rako (Official Video)',
     thumbnail: 'https://img.youtube.com/vi/zkJwHVoOPfc/maxresdefault.jpg',
     videoUrl: 'https://youtu.be/zkJwHVoOPfc?si=VRLdaf63lWPdz-DM',
   },
   {
-    title: 'Behind The Scenes - Studio Session',
-    thumbnail: 'https://images.unsplash.com/photo-1613412207572-5bf376466f93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtdXNpYyUyMHN0dWRpbyUyMG1pY3JvcGhvbmV8ZW58MXx8fHwxNjcwNDQxNzN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    videoUrl: 'https://youtube.com',
-  },
-  {
     title: 'Live Performance - Shoko Festival',
     thumbnail: 'https://img.youtube.com/vi/5FoAKHqIslU/maxresdefault.jpg',
     videoUrl: 'https://youtu.be/5FoAKHqIslU?si=f-K9cdCS8LliOyVu',
-  },
-  {
-    title: 'Huntin Wabbitz Freestyle',
-    thumbnail: 'https://images.unsplash.com/photo-1765804015672-c5a0b61cb389?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMHBvcnRyYWl0JTIwcmVkJTIwbGlnaHRpbmd8ZW58MXx8fHwxNzY3MDQ0MTczfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    videoUrl: 'https://youtube.com',
   },
 ];
 
@@ -47,13 +42,13 @@ export function Videos() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-12 bg-card border border-primary/20 overflow-hidden"
+          className="mb-12 bg-card border-2 border-primary/30 overflow-hidden shadow-[0_0_40px_rgba(164,30,34,0.3)]"
         >
           <div className="aspect-video w-full bg-secondary/50 flex items-center justify-center">
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/7UTjKGTVgeU?si=3xrIvmkYpWF3LtKu"
+              src="https://www.youtube.com/embed/0fdJisNrwLQ"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -61,12 +56,20 @@ export function Videos() {
               allowFullScreen
             ></iframe>
           </div>
-          <div className="p-6">
-            <h3 className="text-2xl mb-2" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-              Latest Release - Official Music Video
+          <div className="p-6 bg-gradient-to-r from-primary/10 to-transparent">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="px-3 py-1 bg-primary text-white text-xs tracking-wider" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                NEW RELEASE
+              </span>
+              <span className="text-xs text-gray-400" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                2026
+              </span>
+            </div>
+            <h3 className="text-3xl mb-2 text-primary" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+              Personari - Official Music Video
             </h3>
             <p className="text-gray-400" style={{ fontFamily: 'Rubik, sans-serif' }}>
-              Watch the official music video for FaceCard by Yadis ft. Briza
+              Watch the official music video for Personari by Yadis (Produced by Usadaro)
             </p>
           </div>
         </motion.div>

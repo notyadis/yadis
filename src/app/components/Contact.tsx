@@ -146,7 +146,7 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white py-4 flex items-center justify-center gap-2 transition-all duration-300"
+                className="w-full bg-primary hover:bg-primary/90 text-white py-4 flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(164,30,34,0.3)] hover:shadow-[0_0_30px_rgba(164,30,34,0.5)]"
               >
                 <Send size={20} />
                 <span style={{ fontFamily: 'Rubik, sans-serif' }}>Send Message</span>

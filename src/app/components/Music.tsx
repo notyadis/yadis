@@ -1,15 +1,20 @@
 import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
-const faceCardCover =
-  "/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png";
-const ndakusasaCover =
-  "/assets/c21eefb525c064d4449d63df929042b50b74193c.png";
+import faceCardCover from '@/asset/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
+import ndakusasaCover from '@/asset/c21eefb525c064d4449d63df929042b50b74193c.png';
+import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const tracks = [
   {
+    title: 'Personari',
+    cover: 'https://images.unsplash.com/photo-1659872685440-940814008b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBibGFjayUyMGFic3RyYWN0JTIwYXJ0fGVufDF8fHx8MTc3NDI4Njc0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    description: 'Latest single - Produced by Usadaro',
+    url: 'https://open.spotify.com/track/6OM9inj7fO8Z1qeTw7YD1V?si=cfbd5b76d6f44c8b',
+  },
+  {
     title: 'FaceCard',
     cover: faceCardCover,
-    description: 'Latest single',
+    description: 'Recent single',
     url: 'https://open.spotify.com/track/3DcYqlFUmCrxUg9TZfcz4c?si=7edc5e1e50f24e65',
   },
   {
@@ -38,7 +43,7 @@ export function Music() {
         </motion.div>
 
         {/* Featured Tracks */}
-        <div className="grid sm:grid-cols-2 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {tracks.map((track, index) => (
             <motion.a
               key={index}
@@ -52,20 +57,29 @@ export function Music() {
               className="group relative bg-card border border-primary/20 overflow-hidden hover:border-primary/50 transition-all duration-300"
             >
               <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={track.cover}
-                  alt={track.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                {typeof track.cover === 'string' && track.cover.startsWith('http') ? (
+                  <ImageWithFallback
+                    src={track.cover}
+                    alt={track.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                ) : (
+                  <img
+                    src={track.cover}
+                    alt={track.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-multiply"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-[0_0_30px_rgba(164,30,34,0.6)]">
                     <Play size={28} className="text-white ml-1" />
                   </div>
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl mb-2" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
+                <h3 className="text-xl mb-2 group-hover:text-primary transition-colors" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
                   {track.title}
                 </h3>
                 <p className="text-sm text-gray-400" style={{ fontFamily: 'Rubik, sans-serif' }}>

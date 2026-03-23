@@ -108,7 +108,7 @@ export function Press() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="mt-6 bg-gradient-to-r from-primary/20 to-primary/10 border border-primary/30 p-6 sm:p-8"
+              className="mt-6 bg-gradient-to-r from-primary/20 to-primary/10 border-2 border-primary/40 p-6 sm:p-8 shadow-[0_0_30px_rgba(164,30,34,0.2)]"
             >
               <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                 <div>
@@ -121,7 +121,7 @@ export function Press() {
                 </div>
                 <button
                   onClick={() => handleDownload('Complete EPK')}
-                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 whitespace-nowrap"
+                  className="px-8 py-4 bg-primary hover:bg-primary/90 text-white transition-all duration-300 whitespace-nowrap shadow-[0_0_20px_rgba(164,30,34,0.4)] hover:shadow-[0_0_30px_rgba(164,30,34,0.6)]"
                 >
                   <span className="flex items-center gap-2" style={{ fontFamily: 'Rubik, sans-serif' }}>
                     <Download size={20} />
@@ -161,27 +161,6 @@ export function Press() {
             </ul>
           </motion.div>
         </div>
-
-        {/* Contact for Press */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center bg-secondary/50 border border-primary/20 p-8"
-        >
-          <h3 className="text-2xl mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-            Media Inquiries
-          </h3>
-          <p className="text-gray-300 mb-6" style={{ fontFamily: 'Rubik, sans-serif' }}>
-            For interviews, features, or booking inquiries, please contact management
-          </p>
-          <a
-            href="#contact"
-            className="inline-block px-8 py-3 border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
-          >
-            <span style={{ fontFamily: 'Rubik, sans-serif' }}>Get in Touch</span>
-          </a>
-        </motion.div>
       </div>
     </section>
   );
