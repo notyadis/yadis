@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
+import personariCover from 'figma:asset/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
 import faceCardCover from '@/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
 import ndakusasaCover from '@/assets/c21eefb525c064d4449d63df929042b50b74193c.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
@@ -7,7 +8,7 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const tracks = [
   {
     title: 'Personari',
-    cover: 'https://images.unsplash.com/photo-1659872685440-940814008b6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyZWQlMjBibGFjayUyMGFic3RyYWN0JTIwYXJ0fGVufDF8fHx8MTc3NDI4Njc0N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+    cover: personariCover,
     description: 'Latest single - Produced by Usadaro',
     url: 'https://open.spotify.com/track/6OM9inj7fO8Z1qeTw7YD1V?si=cfbd5b76d6f44c8b',
   },
