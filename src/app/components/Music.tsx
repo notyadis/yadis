@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
-import personariCover from 'figma:asset/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
+import personariCover from '@/assets/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
 import faceCardCover from '@/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
 import ndakusasaCover from '@/assets/c21eefb525c064d4449d63df929042b50b74193c.png';
 import { ImageWithFallback } from './figma/ImageWithFallback';
