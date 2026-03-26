@@ -5,8 +5,8 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 const videos = [
   {
     title: 'FaceCard (Official Video)',
-    thumbnail: 'https://img.youtube.com/vi/3DcYqlFUmCrxUg9TZfcz4c/maxresdefault.jpg',
-    videoUrl: 'https://youtu.be/3DcYqlFUmCrxUg9TZfcz4c',
+    thumbnail: 'https://img.youtube.com/vi/7UTjKGTVgeU/maxresdefault.jpg',
+    videoUrl: 'https://youtu.be/7UTjKGTVgeU',
   },
   {
     title: 'Simba Rako (Official Video)',
