@@ -7,6 +7,7 @@ import { Press } from './components/Press';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
+import favicon from '@/assets/d67320c8e54a5b8ad2d2092088e378cf4d6c7d9b.png';
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
       <Helmet>
         <title>Yadis - Hectic Yard | Zimbabwean Hip Hop Artist</title>
         <meta name="description" content="Hectic Yard" />
+        <link rel="icon" type="image/png" href={favicon} />
         
         {/* Open Graph / Facebook / WhatsApp */}
         <meta property="og:title" content="Yadis - Hectic Yard" />
