@@ -17,7 +17,7 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links 
           <div>
             <h4 className="mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
               Quick Links
@@ -35,7 +35,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
+          </div>*/}
 
           {/* Social */}
           <div>
@@ -76,7 +76,7 @@ export function Footer() {
               © {currentYear} Yadis. All rights reserved.
             </p>
             <p className="text-xs text-gray-500" style={{ fontFamily: 'Rubik, sans-serif' }}>
-              Website by Make • Figma
+              Website by Siday
             </p>
           </div>
         </div>
