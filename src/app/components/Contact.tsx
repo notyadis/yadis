@@ -27,6 +27,7 @@ const socialLinks = [
 ];
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -34,13 +35,37 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real implementation, this would send the form data to a backend
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! Management will get back to you soon.\n\nNote: This is a demo form. For real inquiries, please use the social links below.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  // 1. Point to your unique Formspree ID
+  const formId = import.meta.env.VITE_FORMSPREE_ID; 
+  const endpoint = `https://formspree.io/f/${formId}`;
+
+  // 2. Use fetch to send the data
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      alert("Thank you! Management will get back to you soon.");
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } else {
+      alert("Oops! There was a problem submitting your form.");
+    }
+  } catch (error) {
+    alert("There was an error connecting to the server. Please try again.");
+  } finally {
+      setIsSubmitting(false); // Re-enable button
+    }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -146,10 +171,13 @@ export function Contact() {
 
               <button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-white py-4 flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(164,30,34,0.3)] hover:shadow-[0_0_30px_rgba(164,30,34,0.5)]"
+                disabled={isSubmitting} // Prevent double-clicks
+                className={`w-full bg-primary hover:bg-primary/90 text-white py-4 flex items-center justify-center gap-2 transition-all duration-300 shadow-[0_0_20px_rgba(164,30,34,0.3)] hover:shadow-[0_0_30px_rgba(164,30,34,0.5)] ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <Send size={20} />
-                <span style={{ fontFamily: 'Rubik, sans-serif' }}>Send Message</span>
+                <span style={{ fontFamily: 'Rubik, sans-serif' }}>
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </span>
               </button>
             </form>
           </motion.div>
