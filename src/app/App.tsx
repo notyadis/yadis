@@ -32,7 +32,7 @@ export default function App() {
         <img
           src={siteBackground}
           alt=""
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-right md:object-center"
         />
         {/* Slight darkening so text sections stay readable */}
         <div className="absolute inset-0 bg-black/30" />
