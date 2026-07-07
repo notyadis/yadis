@@ -4,7 +4,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-black border-t border-primary/30 py-12">
+    <footer className="bg-black/80 border-t border-primary/30 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
@@ -17,7 +17,7 @@ export function Footer() {
             </p>
           </div>
 
-          {/* Quick Links 
+          {/* Quick Links */}
           <div>
             <h4 className="mb-4" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
               Quick Links
@@ -35,7 +35,7 @@ export function Footer() {
                 </li>
               ))}
             </ul>
-          </div>*/}
+          </div>
 
           {/* Social */}
           <div>

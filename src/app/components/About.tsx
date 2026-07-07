@@ -1,10 +1,10 @@
 import { motion } from 'motion/react';
 import { Award } from 'lucide-react';
-import bioBackground from '../../assets/f3a4e83d490c11cf5aa459cb6968b9493a3ee9aa.png';
+import bioBackground from 'figma:asset/f3a4e83d490c11cf5aa459cb6968b9493a3ee9aa.png';
 
 export function About() {
   return (
-    <section id="about" className="py-20 bg-gradient-to-b from-black to-secondary">
+    <section id="about" className="py-20 bg-black/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

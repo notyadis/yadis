@@ -22,7 +22,7 @@ const videos = [
 
 export function Videos() {
   return (
-    <section id="videos" className="py-20 bg-gradient-to-b from-secondary to-black">
+    <section id="videos" className="py-20 bg-black/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -3,7 +3,6 @@ import { Play, ExternalLink } from 'lucide-react';
 import personariCover from '@/assets/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
 import faceCardCover from '@/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
 import ndakusasaCover from '@/assets/c21eefb525c064d4449d63df929042b50b74193c.png';
-import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const tracks = [
   {
@@ -28,7 +27,7 @@ const tracks = [
 
 export function Music() {
   return (
-    <section id="music" className="py-20 bg-black">
+    <section id="music" className="py-20 bg-black/70 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -58,19 +57,11 @@ export function Music() {
               className="group relative bg-card border border-primary/20 overflow-hidden hover:border-primary/50 transition-all duration-300"
             >
               <div className="relative aspect-square overflow-hidden">
-                {typeof track.cover === 'string' && track.cover.startsWith('http') ? (
-                  <ImageWithFallback
-                    src={track.cover}
-                    alt={track.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                ) : (
-                  <img
-                    src={track.cover}
-                    alt={track.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                )}
+                <img
+                  src={track.cover}
+                  alt={track.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 mix-blend-multiply"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
