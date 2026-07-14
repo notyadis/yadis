@@ -76,7 +76,7 @@ export function Footer() {
               © {currentYear} Yadis. All rights reserved.
             </p>
             <p className="text-xs text-gray-500" style={{ fontFamily: 'Rubik, sans-serif' }}>
-              Website by Siday
+              Website by Make • Figma
             </p>
           </div>
         </div>

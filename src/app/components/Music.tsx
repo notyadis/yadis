@@ -2,26 +2,28 @@ import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
 import personariCover from '@/assets/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
 import faceCardCover from '@/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
-import ndakusasaCover from '@/assets/c21eefb525c064d4449d63df929042b50b74193c.png';
 
 const tracks = [
   {
+    title: 'Breaking My Heart',
+    cover: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024c85ba6db5647deb7e6406c7',
+    description: 'Latest single',
+    url: 'https://open.spotify.com/track/4pN0GwUDNYO7yNjzJ9IAnR?si=06df1f15972d4bcf',
+    isNew: true,
+  },
+  {
     title: 'Personari',
     cover: personariCover,
-    description: 'Latest single - Produced by Usadaro',
+    description: 'Produced by Usadaro',
     url: 'https://open.spotify.com/track/6OM9inj7fO8Z1qeTw7YD1V?si=cfbd5b76d6f44c8b',
+    isNew: false,
   },
   {
     title: 'FaceCard',
     cover: faceCardCover,
-    description: 'Recent single',
+    description: 'Single',
     url: 'https://open.spotify.com/track/3DcYqlFUmCrxUg9TZfcz4c?si=7edc5e1e50f24e65',
-  },
-  {
-    title: 'Ndakusasa EP',
-    cover: ndakusasaCover,
-    description: 'Debut project featuring Kepele & Simba Rako',
-    url: 'https://open.spotify.com/album/5ztJ00AZzyiBxuRCdqaMRG?si=7Ey3bT2OQ9GsDd36PK1SLA',
+    isNew: false,
   },
 ];
 
@@ -42,7 +44,6 @@ export function Music() {
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        {/* Featured Tracks */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {tracks.map((track, index) => (
             <motion.a
@@ -56,9 +57,14 @@ export function Music() {
               transition={{ delay: index * 0.1 }}
               className="group relative bg-card border border-primary/20 overflow-hidden hover:border-primary/50 transition-all duration-300"
             >
+              {track.isNew && (
+                <div className="absolute top-3 left-3 z-10 px-2 py-1 bg-primary text-white text-xs tracking-wider" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                  NEW
+                </div>
+              )}
               <div className="relative aspect-square overflow-hidden">
                 <img
-                  src={track.cover}
+                  src={typeof track.cover === 'string' ? track.cover : track.cover}
                   alt={track.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />

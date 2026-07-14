@@ -4,14 +4,19 @@ import { ImageWithFallback } from './figma/ImageWithFallback';
 
 const videos = [
   {
+    title: 'Personari (Official Music Video)',
+    thumbnail: 'https://img.youtube.com/vi/0fdJisNrwLQ/maxresdefault.jpg',
+    videoUrl: 'https://youtu.be/0fdJisNrwLQ',
+  },
+  {
     title: 'FaceCard (Official Video)',
     thumbnail: 'https://img.youtube.com/vi/7UTjKGTVgeU/maxresdefault.jpg',
     videoUrl: 'https://youtu.be/7UTjKGTVgeU',
   },
   {
-    title: 'Simba Rako (Official Video)',
-    thumbnail: 'https://img.youtube.com/vi/zkJwHVoOPfc/maxresdefault.jpg',
-    videoUrl: 'https://youtu.be/zkJwHVoOPfc?si=VRLdaf63lWPdz-DM',
+    title: '263 ft. Yadis (Hweda)',
+    thumbnail: 'https://img.youtube.com/vi/dABoysn6Gfw/maxresdefault.jpg',
+    videoUrl: 'https://youtu.be/dABoysn6Gfw?si=x6Jgz2G94MG4rxTW',
   },
   {
     title: 'Live Performance - Shoko Festival',
@@ -37,7 +42,7 @@ export function Videos() {
           <div className="w-24 h-1 bg-primary mx-auto"></div>
         </motion.div>
 
-        {/* Featured Video */}
+        {/* Featured Video — Breaking My Heart */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -48,8 +53,8 @@ export function Videos() {
             <iframe
               width="100%"
               height="100%"
-              src="https://www.youtube.com/embed/0fdJisNrwLQ"
-              title="YouTube video player"
+              src="https://www.youtube.com/embed/cL-2nL6c6Sg"
+              title="Breaking My Heart - Yadis"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -66,10 +71,10 @@ export function Videos() {
               </span>
             </div>
             <h3 className="text-3xl mb-2 text-primary" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-              Personari - Official Music Video
+              Breaking My Heart - Official Music Video
             </h3>
             <p className="text-gray-400" style={{ fontFamily: 'Rubik, sans-serif' }}>
-              Watch the official music video for Personari by Yadis (Produced by Usadaro)
+              Watch the official music video for Breaking My Heart by Yadis
             </p>
           </div>
         </motion.div>

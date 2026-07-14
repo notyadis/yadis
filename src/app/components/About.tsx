@@ -45,7 +45,7 @@ export function About() {
           <div className="relative z-10 p-8 sm:p-12 lg:p-16">
             <div className="max-w-4xl mx-auto space-y-6">
               <h3 className="text-3xl sm:text-4xl mb-4 text-primary" style={{ fontFamily: 'Bebas Neue, sans-serif' }}>
-                Hectic Yard
+                Multi-Award Winning Artist
               </h3>
               <p className="text-gray-200 mb-4 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
                 Harare-born rapper and songwriter Yadis is a central figure in modern Zimbabwean hip-hop. Blending English and Shona with an introspective delivery, she captures the grit and hustle of Zimbabwean youth.
@@ -54,7 +54,7 @@ export function About() {
                 2025 was her breakout year. After building a following through viral freestyles, she released her debut project, the Ndakusasa Mixtape. Her momentum continued through the Mashoko Tapes Vol. 2 residency, leading to a performance at Shoko Festival 2025, where she collaborated with UK rapper OneDa on the Mash Up Night stage. The year concluded with Yadis winning Best Female Artist at the 2025 Zim Hip Hop Awards.
               </p>
               <p className="text-gray-200 mb-6 leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                In 2026, Yadis has continued to release new work and expand her reach. Following a performance at Shebeen Fest where she previewed new material, she released the music video for her latest single, "Personari" (produced by Usadaro). She also joined the Music Connects Africa program, further integrating her into the continental music scene. With a catalog that includes tracks from her debut mixtape and collaborations with artists like Hooksmith and Briza, Yadis continues to evolve her sound.
+                In 2026, Yadis has continued to push her sound forward. After releasing the music video for "Personari" (produced by Usadaro) and joining the Music Connects Africa program, she landed a standout feature on Hweda's "263" — a track that further cemented her place on the continental stage. Her latest single, "Breaking My Heart," showcases a bold new direction and is out now on all platforms.
               </p>
             </div>
           </div>
