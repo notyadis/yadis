@@ -2,11 +2,12 @@ import { motion } from 'motion/react';
 import { Play, ExternalLink } from 'lucide-react';
 import personariCover from '@/assets/cbcd2b982c78f4ce56cb6336438355efd29965d5.png';
 import faceCardCover from '@/assets/3a43c781dfbc65f33f33726b3407b849c9b07b36.png';
+import breakingmyheartCover from '@/assets/Breaking_My_Heart_Official_Cover.png.png';
 
 const tracks = [
   {
     title: 'Breaking My Heart',
-    cover: 'https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e024c85ba6db5647deb7e6406c7',
+    cover: breakingmyheartCover,
     description: 'Latest single',
     url: 'https://open.spotify.com/track/4pN0GwUDNYO7yNjzJ9IAnR?si=06df1f15972d4bcf',
     isNew: true,
